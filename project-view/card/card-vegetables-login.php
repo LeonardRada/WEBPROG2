@@ -3,7 +3,7 @@
               <div class="row flex-row flex-nowrap">
                   <div class="col-3">
                       <div class="card card-block">
-                        <img class="card-img-top" src="../assets/items/brocolli.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="assets/items/brocolli.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h4 class="card-title font-weight-bold">Brocolli</h4>
                           <h6 class="price"><u>Price: PHP 100</u></h6>
@@ -21,7 +21,7 @@
 
                   <div class="col-3">
                       <div class="card card-block">
-                        <img class="card-img-top" src="../assets/items/cabbage.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="assets/items/cabbage.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h4 class="card-title font-weight-bold">Cabbage</h4>
                           <h6 class="price"><u>Price: PHP 50</u></h6>
@@ -39,7 +39,7 @@
 
                   <div class="col-3">
                       <div class="card card-block">
-                        <img class="card-img-top" src="../assets/items/carrots.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="assets/items/carrots.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h4 class="card-title font-weight-bold">Carrots</h4>
                           <h6 class="price"><u>Price: PHP 30</u></h6>
@@ -57,7 +57,7 @@
 
                   <div class="col-3">
                       <div class="card card-block">
-                        <img class="card-img-top" src="../assets/items/eggplant.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="assets/items/eggplant.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h4 class="card-title font-weight-bold">Eggplant</h4>
                           <h6 class="price"><u>Price: PHP 20</u></h6>
@@ -79,7 +79,7 @@
               <div class="row flex-row flex-nowrap">
                   <div class="col-3">
                       <div class="card card-block">
-                        <img class="card-img-top" src="../assets/items/lettuce.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="assets/items/lettuce.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h4 class="card-title font-weight-bold">Lettuce</h4>
                           <h6 class="price"><u>Price: PHP 20</u></h6>
@@ -97,7 +97,7 @@
 
                   <div class="col-3">
                       <div class="card card-block">
-                        <img class="card-img-top" src="../assets/items/potato.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="assets/items/potato.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h4 class="card-title font-weight-bold">Potato</h4>
                           <h6 class="price"><u>Price: PHP 20</u></h6>
@@ -115,7 +115,7 @@
 
                   <div class="col-3">
                       <div class="card card-block">
-                        <img class="card-img-top" src="../assets/items/radish.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="assets/items/radish.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h4 class="card-title font-weight-bold">Radish</h4>
                           <h6 class="price"><u>Price: PHP 40</u></h6>
@@ -133,7 +133,7 @@
 
                   <div class="col-3">
                       <div class="card card-block">
-                        <img class="card-img-top" src="../assets/items/tomato.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="assets/items/tomato.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h4 class="card-title font-weight-bold">Tomato</h4>
                           <h6 class="price"><u>Price: PHP 15</u></h6>

@@ -1,7 +1,20 @@
         <?php
+          session_start();
+
+          if(!isset($_SESSION['username'])) {
+            header('Location: ../login.php?error=Unauthorized access');
+            exit;
+          }
+
+          if($_SERVER['HTTPS'] != 'on'){
+          	header('Location: https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
+          	exit;
+          }
+         ?>
+
+        <?php
           require_once '../header/project-header-login.php';
           require_once '../modal/logout-modal.php';
-          require_once '../process/login.php';
         ?>
 
         <!-- NAVIGATION BAR -->

@@ -1,6 +1,11 @@
         <?php
-          include('project-view/modal/login-modal.php');
-          include('project-view/modal/signup-modal.php');
+          if($_SERVER['HTTPS'] != 'on'){
+            header('Location: https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
+            exit;
+          }
+
+          require_once('project-view/modal/login-modal.php');
+          require_once('project-view/modal/signup-modal.php');
          ?>
 
         <!-- NAVIGATION BAR -->
@@ -14,7 +19,8 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
               <ul class="navbar-nav text-uppercase ml-auto">
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php">Work Studio</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="" data-toggle="modal" data-target="#loginModal" >Login</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="project-view/login.php">Login</a></li>
+                <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="" data-toggle="modal" data-target="#loginModal" >Login</a></li> -->
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="" data-toggle="modal" data-target="#signupModal" >Sign-Up</a></li>
               </ul>
             </div>

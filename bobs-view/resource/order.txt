@@ -72,3 +72,4 @@
 16:36, 23rd June 2020	1 tires	1 Oil	1 Spark Plugs	$180
 14:31, 24th June 2020	1 tires	1 Oil	1 Spark Plugs	$180
 07:49, 29th June 2020	1 tires	1 Oil	1 Spark Plugs	$180
+14:18, 7th July 2020	1 tires	5 Oil	1 Spark Plugs	$380

@@ -1,5 +1,6 @@
 <?php
   session_start();
+  require_once('../service/register.php');
   $username = $_POST['username'];
   $password = $_POST['password'];
   $firstname = $_POST['firstname'];
@@ -20,13 +21,15 @@
     }
 
     $query = 'insert into register (username,password,firstname,middlename,lastname,suffix) values (?,?,?,?,?,?)';
+    registerInfo($query);
     $stmt = $db->prepare($query);
-    $stmt->bind_param("ssssss", $username,$password,$firstname,$middlename,$lastname,$suffix);
+    $hashedPassword = hash('sha512', $password);
+    $stmt->bind_param("ssssss", $username,$hashedPassword,$firstname,$middlename,$lastname,$suffix);
     $stmt->execute();
 
-    $query1 = 'insert into users (username,password) values (?,?)';
+    $query1 = 'insert into user_info (username,password) values (?,?)';
     $stmt1 = $db->prepare($query1);
-    $stmt1->bind_param("ss", $username,$password);
+    $stmt1->bind_param("ss", $username,$hashedPassword);
     $stmt1->execute();
 
     $affectedRows = $stmt->affected_rows;

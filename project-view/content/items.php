@@ -1,5 +1,11 @@
 <?php
 session_start();
+
+if($_SERVER['HTTPS'] != 'on'){
+	header('Location: https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
+	exit;
+}
+
 $connect = mysqli_connect("localhost", "root", "", "product");
 
 			if(isset($_POST["add_to_cart"])){
@@ -42,6 +48,8 @@ $connect = mysqli_connect("localhost", "root", "", "product");
 			}
 ?>
 
+
+
 <?php
 	require_once '../header/project-header.php';
 ?>
@@ -60,7 +68,7 @@ $connect = mysqli_connect("localhost", "root", "", "product");
 
 		<div class="container">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			  <a class="navbar-brand" href="../content/project-content-login.php">Nature Village</a>
+			  <a class="navbar-brand" href="../index.php">Nature Village</a>
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			    <span class="navbar-toggler-icon"></span>
 			  </button>
@@ -68,21 +76,34 @@ $connect = mysqli_connect("localhost", "root", "", "product");
 			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 			    <ul class="navbar-nav mr-auto">
 			      <li class="nav-item">
-			        <a class="nav-link" href="../content/project-content-login.php">Home <span class="sr-only">(current)</span></a>
+			        <a class="nav-link" href="../index.php">Home <span class="sr-only">(current)</span></a>
 			      </li>
 
 						<li class="nav-item">
 						 <a class="nav-link" href="../content/checkout.php">Checkout
 							 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 						 	 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-						 	 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-						 	 &emsp;&emsp;&emsp;</a>
+						 	 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+						 </a>
 					 </li>
 
-					 <form class="form-inline my-2 my-lg-0">
-				     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-				     <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
-			     </form>
+					 <form action="results.php" method="post" class="form-inline my-2 my-lg-0">
+						 <div class="form-group mr-sm-2">
+							 <select class="form-control" id="searchType" name="searchType">
+								 <option value="name">Name</option>
+								 <option value="price">Price</option>
+							 </select>
+						 </div>
+
+						 <div class="form-group">
+							 <input type="text" id="searchTerm" name="searchTerm" class="form-control" placeholder="Search"/>
+						 </div>
+
+						 <div>
+							 <button type="submit" class="btn btn-primary">Submit</button>
+						 </div>
+					 </form>
+
 			    </ul>
 			  </div>
 			</nav>

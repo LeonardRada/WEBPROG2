@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 02, 2020 at 03:19 PM
+-- Generation Time: Jul 07, 2020 at 04:14 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.7
 
@@ -37,7 +37,8 @@ CREATE TABLE `address` (
 --
 
 INSERT INTO `address` (`id`, `address`) VALUES
-(10, 'Morning Breeze');
+(10, 'Morning Breeze'),
+(27, 'Morning Breeze');
 
 -- --------------------------------------------------------
 
@@ -64,7 +65,15 @@ INSERT INTO `register` (`id`, `username`, `password`, `firstname`, `middlename`,
 (2, 'iamcool', '12345678', 'John', 'Michael', 'Supot', 'Jr.'),
 (3, 'Seaweed', '12345678', 'Seaweed', 'Man', 'Cool', ''),
 (4, 'KingTortol', '12345678', 'John', 'Leonard', 'Rada', ''),
-(5, 'Betlog', '12345678', 'John', 'Rick', 'Cool', '');
+(5, 'Betlog', '12345678', 'John', 'Rick', 'Cool', ''),
+(6, 'John Leonard', '12345678', 'John', 'Leonard', 'Rada', ''),
+(7, 'Sick', 'fa585d89c851dd338a70dcf535aa2a92fee7836dd6aff1226583e88e0996293f16bc009c652826e0fc5c706695a03cddce37', 'John', 'Is', 'Sick', ''),
+(8, 'Me', 'fa585d89c851dd338a70dcf535aa2a92fee7836dd6aff1226583e88e0996293f16bc009c652826e0fc5c706695a03cddce37', 'Rick', 'Leonard', 'Cool', ''),
+(9, 'James', 'fa585d89c851dd338a70dcf535aa2a92fee7836dd6aff1226583e88e0996293f16bc009c652826e0fc5c706695a03cddce37', 'James', 'Lebron', 'Jr', ''),
+(10, 'Leonard', 'fa585d89c851dd338a70dcf535aa2a92fee7836dd6aff1226583e88e0996293f16bc009c652826e0fc5c706695a03cddce37', 'John', 'Leonard', 'Rada', 'Jr.'),
+(12, 'Old Man', 'fa585d89c851dd338a70dcf535aa2a92fee7836dd6aff1226583e88e0996293f16bc009c652826e0fc5c706695a03cddce37', 'Jack', 'Overland', 'Frost', ''),
+(13, 'Jack', 'fa585d89c851dd338a70dcf535aa2a92fee7836dd6aff1226583e88e0996293f16bc009c652826e0fc5c706695a03cddce37', 'Jackson', 'Overland', 'Frost', ''),
+(14, 'Frost', 'fa585d89c851dd338a70dcf535aa2a92fee7836dd6aff1226583e88e0996293f16bc009c652826e0fc5c706695a03cddce37', 'John', 'Overland', 'Frost', '');
 
 -- --------------------------------------------------------
 
@@ -78,6 +87,20 @@ CREATE TABLE `users` (
   `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 -- Error reading data for table phplogin.users: #1064 - You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM `phplogin`.`users`' at line 1
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_info`
+--
+
+CREATE TABLE `user_info` (
+  `id` int(6) UNSIGNED NOT NULL,
+  `username` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `active` tinyint(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+-- Error reading data for table phplogin.user_info: #1064 - You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM `phplogin`.`user_info`' at line 1
 
 --
 -- Indexes for dumped tables
@@ -103,6 +126,12 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `user_info`
+--
+ALTER TABLE `user_info`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -110,19 +139,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `address`
 --
 ALTER TABLE `address`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `register`
 --
 ALTER TABLE `register`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `user_info`
+--
+ALTER TABLE `user_info`
+  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

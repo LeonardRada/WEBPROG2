@@ -1,4 +1,11 @@
       <?php
+        if($_SERVER['HTTPS'] != 'on'){
+          header('Location: https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
+          exit;
+        }
+       ?>
+
+      <?php
         $address = $_POST['address'];
 
         try{
@@ -159,7 +166,7 @@ $connect = mysqli_connect("localhost", "root", "", "product");
 				<!-- CONFIRMATION DETAILS -->
 				<div class="container-fluid border">
 					<div class="text-center">
-						<h3 class="section-heading text-uppercase">CONFIRMATION DETAILS</h3>
+						<h3 class="section-heading text-uppercase">CHECKOUT COMPLETE</h3>
 						<div class="card-body">
 
 						</div>
